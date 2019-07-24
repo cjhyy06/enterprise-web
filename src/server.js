@@ -4,8 +4,9 @@ let consoleLogger = console
 
 const app = new Express()
 
-app.get('/api', (req, res, next) => {
-  res.send('hello express')
+// attach apis
+import('./router-api').then(fnc => {
+  fnc(app)
 })
 
 const port = 3000

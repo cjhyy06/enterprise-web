@@ -15,6 +15,7 @@ module.exports = {
     parser: 'babel-eslint'
   },
   globals: {
+    '$': true,
     '__BROWSER__': true
   }
 }

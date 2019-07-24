@@ -14,28 +14,28 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        sliderHeight: 0
-      }
-    },
-    methods: {
-      init() {
-        let windowHeight = $(window).height()
-        let appHeaderHeight = $(this.$refs.header.$el).height()
-        let appFooterHeight = $(this.$refs.footer.$el).height()
-        let sliderHeight = windowHeight - appHeaderHeight - appFooterHeight
-        console.log(windowHeight, appHeaderHeight, appFooterHeight)
-        this.sliderHeight = sliderHeight
-        let minContentHeight = sliderHeight
-        $(this.$refs.mainContent).css('min-height', minContentHeight)
-      }
-    },
-    mounted() {
-      this.init()
+export default {
+  data () {
+    return {
+      sliderHeight: 0
     }
+  },
+  methods: {
+    init () {
+      let windowHeight = $(window).height()
+      let appHeaderHeight = $(this.$refs.header.$el).height()
+      let appFooterHeight = $(this.$refs.footer.$el).height()
+      let sliderHeight = windowHeight - appHeaderHeight - appFooterHeight
+      console.log(windowHeight, appHeaderHeight, appFooterHeight)
+      this.sliderHeight = sliderHeight
+      let minContentHeight = sliderHeight
+      $(this.$refs.mainContent).css('min-height', minContentHeight)
+    }
+  },
+  mounted () {
+    this.init()
   }
+}
 
 </script>
 

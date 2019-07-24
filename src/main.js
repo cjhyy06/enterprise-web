@@ -8,8 +8,15 @@ import './components'
 
 Vue.config.productionTip = false
 
-new Vue({
+let instance = new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
+
+window.AppRuntimeContext = {
+  Vue,
+  router,
+  store,
+  instance
+}
